@@ -5,33 +5,32 @@ Future<void> _initCommon() async {
 
   await _setDeviceOrientation();
 
-  // sl.registerSingleton<SharedPreferencesHelper>(
-  //   SharedPreferencesHelper(
-  //     preferences: await SharedPreferences.getInstance(),
-  //   ),
-  // );
+  sl.registerSingleton<SharedPreferencesHelper>(
+    SharedPreferencesHelper(
+      preferences: await SharedPreferences.getInstance(),
+    ),
+  );
 
-  // await sl<SharedPreferencesHelper>().migrateOldUsers();
 
-  // sl.registerSingleton<Talker>(
-  //   Talker(
-  //     observer: LoggerObserver(),
-  //   ),
-  // );
+  sl.registerSingleton<Talker>(
+    Talker(
+      observer: LoggerObserver(),
+    ),
+  );
 
-  // sl.registerSingleton<DioHttpClient>(
-  //   DioHttpClient(),
-  // );
+  sl.registerSingleton<DioHttpClient>(
+    DioHttpClient(),
+  );
 
-  // sl.registerSingleton<UrlLauncherService>(
-  //   UrlLauncherService(),
-  // );
+  sl.registerSingleton<UrlLauncherService>(
+    UrlLauncherService(),
+  );
 
-  // final appInfoServiceInitCompleter = Completer<void>();
-  // sl.registerSingleton<AppInfoService>(
-  //   AppInfoService(initCompleter: appInfoServiceInitCompleter),
-  // );
-  // await appInfoServiceInitCompleter.future;
+  final appInfoServiceInitCompleter = Completer<void>();
+  sl.registerSingleton<AppInfoService>(
+    AppInfoService(initCompleter: appInfoServiceInitCompleter),
+  );
+  await appInfoServiceInitCompleter.future;
 }
 
 _setDeviceOrientation() async {
