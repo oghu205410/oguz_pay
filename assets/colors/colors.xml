@@ -1,0 +1,29 @@
+<resources>
+    <!-- Light Mode Colors -->
+    <color name="scaffoldBackgroundLight">#F5F9FF</color>
+    <color name="surfaceLight">#FFFFFF</color>
+    <color name="onSurfaceLight">#1E2A38</color>
+
+    <color name="primaryLight">#0077CC</color>
+    <color name="onPrimaryLight">#FFFFFF</color>
+
+    <color name="secondaryLight">#00B15D</color>
+    <color name="onSecondaryLight">#FFFFFF</color>
+
+    <color name="errorLight">#D32F2F</color>
+    <color name="onErrorLight">#FFFFFF</color>
+
+    <!-- Dark Mode Colors -->
+    <color name="scaffoldBackgroundDark">#121212</color>
+    <color name="surfaceDark">#1F1F1F</color>
+    <color name="onSurfaceDark">#E1E1E1</color>
+
+    <color name="primaryDark">#5394E0</color>
+    <color name="onPrimaryDark">#FFFFFF</color>
+
+    <color name="secondaryDark">#00E07A</color>
+    <color name="onSecondaryDark">#FFFFFF</color>
+
+    <color name="errorDark">#CF6679</color>
+    <color name="onErrorDark">#FFFFFF</color>
+</resources>
