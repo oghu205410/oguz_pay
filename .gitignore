@@ -44,3 +44,6 @@ app.*.map.json
 
 # Environment
 .env
+
+# Ignore generated files
+lib/generated
