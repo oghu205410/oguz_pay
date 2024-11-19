@@ -9,6 +9,7 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:auto_route/auto_route.dart' as _i7;
+import 'package:flutter/material.dart' as _i8;
 import 'package:oguz_pay/src/presentation/home/home_screen.dart' as _i1;
 import 'package:oguz_pay/src/presentation/onboarding/onboarding_business_screen.dart'
     as _i3;
@@ -59,10 +60,14 @@ class LoginRoute extends _i7.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i3.OnboardingBusinessScreen]
-class OnboardingBusinessRoute extends _i7.PageRouteInfo<void> {
-  const OnboardingBusinessRoute({List<_i7.PageRouteInfo>? children})
-      : super(
+class OnboardingBusinessRoute
+    extends _i7.PageRouteInfo<OnboardingBusinessRouteArgs> {
+  OnboardingBusinessRoute({
+    _i8.Key? key,
+    List<_i7.PageRouteInfo>? children,
+  }) : super(
           OnboardingBusinessRoute.name,
+          args: OnboardingBusinessRouteArgs(key: key),
           initialChildren: children,
         );
 
@@ -71,17 +76,34 @@ class OnboardingBusinessRoute extends _i7.PageRouteInfo<void> {
   static _i7.PageInfo page = _i7.PageInfo(
     name,
     builder: (data) {
-      return const _i3.OnboardingBusinessScreen();
+      final args = data.argsAs<OnboardingBusinessRouteArgs>(
+          orElse: () => const OnboardingBusinessRouteArgs());
+      return _i3.OnboardingBusinessScreen(key: args.key);
     },
   );
 }
 
+class OnboardingBusinessRouteArgs {
+  const OnboardingBusinessRouteArgs({this.key});
+
+  final _i8.Key? key;
+
+  @override
+  String toString() {
+    return 'OnboardingBusinessRouteArgs{key: $key}';
+  }
+}
+
 /// generated route for
 /// [_i4.OnboardingIndividualScreen]
-class OnboardingIndividualRoute extends _i7.PageRouteInfo<void> {
-  const OnboardingIndividualRoute({List<_i7.PageRouteInfo>? children})
-      : super(
+class OnboardingIndividualRoute
+    extends _i7.PageRouteInfo<OnboardingIndividualRouteArgs> {
+  OnboardingIndividualRoute({
+    _i8.Key? key,
+    List<_i7.PageRouteInfo>? children,
+  }) : super(
           OnboardingIndividualRoute.name,
+          args: OnboardingIndividualRouteArgs(key: key),
           initialChildren: children,
         );
 
@@ -90,9 +112,22 @@ class OnboardingIndividualRoute extends _i7.PageRouteInfo<void> {
   static _i7.PageInfo page = _i7.PageInfo(
     name,
     builder: (data) {
-      return const _i4.OnboardingIndividualScreen();
+      final args = data.argsAs<OnboardingIndividualRouteArgs>(
+          orElse: () => const OnboardingIndividualRouteArgs());
+      return _i4.OnboardingIndividualScreen(key: args.key);
     },
   );
+}
+
+class OnboardingIndividualRouteArgs {
+  const OnboardingIndividualRouteArgs({this.key});
+
+  final _i8.Key? key;
+
+  @override
+  String toString() {
+    return 'OnboardingIndividualRouteArgs{key: $key}';
+  }
 }
 
 /// generated route for
