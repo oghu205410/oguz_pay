@@ -5,7 +5,6 @@ import 'package:intl/intl.dart';
 import 'package:mobx/mobx.dart';
 
 import '../../../../generated/strings.g.dart';
-import '../../../common/utils/logger/logger.dart';
 import '../../../domain/entity/entity.dart';
 import '../../../domain/repository/src/settings_repository.dart';
 
@@ -41,8 +40,6 @@ abstract class _SettingsStoreBase with Store {
     LocaleSettings.setLocale(settings.locale);
 
     _initCompleter.complete();
-
-    syncSettings();
   }
 
   @action
@@ -59,16 +56,5 @@ abstract class _SettingsStoreBase with Store {
     LocaleSettings.setLocale(locale);
 
     await _settingsRepository.saveSettings(settings);
-  }
-
-  @action
-  Future<void> syncSettings() async {
-    try {
-      final remoteSettings = await _settingsRepository.syncSettings(settings);
-
-      settings = remoteSettings;
-    } catch (error, stackTrace) {
-      Logger.e(error, stackTrace);
-    }
   }
 }

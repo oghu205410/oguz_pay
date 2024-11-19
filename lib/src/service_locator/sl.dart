@@ -12,6 +12,9 @@ import '../common/services/url_launcher/url_launcher_service.dart';
 import '../common/utils/logger/logger_observer.dart';
 import '../data/data_sources/http/dio_http_client/dio_http_client.dart';
 import '../data/data_sources/shared_preferences/shared_preferences_helper.dart';
+import '../data/repository/repository.dart';
+import '../domain/repository/src/settings_repository.dart';
+import '../presentation/settings/store/settings_store.dart';
 
 part 'src/common.dart';
 part 'src/data_layer.dart';
