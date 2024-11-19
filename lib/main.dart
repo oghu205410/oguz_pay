@@ -1,20 +1,31 @@
+import 'dart:async';
+import 'dart:io';
+
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/date_symbol_data_local.dart';
 
-void main() {
-  runApp(const MainApp());
-}
+import 'generated/strings.g.dart';
+import 'src/common/utils/logger/logger.dart';
+import 'src/data/data_sources/http/http_overrides.dart';
+import 'src/presentation/application.dart';
+import 'src/service_locator/sl.dart';
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+void main() async => runZonedGuarded(
+      () async {
+        WidgetsFlutterBinding.ensureInitialized();
+        HttpOverrides.global = MyHttpOverrides();
+        FlutterError.onError = Logger.logFlutterError;
+        PlatformDispatcher.instance.onError = Logger.logPlatformDispatcherError;
+        initializeDateFormatting();
 
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
+        await initServiceLocator();
+
+        runApp(
+          TranslationProvider(
+            child: const Application(),
+          ),
+        );
+      },
+      Logger.logZoneError,
     );
-  }
-}
