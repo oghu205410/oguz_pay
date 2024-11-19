@@ -1,0 +1,14 @@
+{
+  "@@locale": "ru",
+  "hello": "Привет!",
+  "settings": {
+    "theme": "Тема",
+    "language": "Язык",
+    "aboutApp": "О приложении",
+    "aboutAppSubtitle": "Нажмите чтобы узнать больше о приложении"
+  },
+  "themeMode": {
+    "dark": "Темный",
+    "light": "Светлый"
+  }
+}

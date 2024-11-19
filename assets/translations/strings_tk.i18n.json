@@ -1,0 +1,14 @@
+{
+  "@@locale": "tk",
+  "hello": "Salam!",
+  "settings": {
+    "theme": "Tema",
+    "language": "Dil",
+    "aboutApp": "Programma Barada",
+    "aboutAppSubtitle": "Programma barada köpräk bilmek üçin basyň"
+  },
+  "themeMode": {
+    "dark": "Garaňky",
+    "light": "Ýagty"
+  }
+}
