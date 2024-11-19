@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
+import '../../common/config/router/app_router.gr.dart';
 import '../../common/constant/app_constants.dart';
 import '../../common/utils/extension/extensions.dart';
 import '../../common/widget/space.dart';
@@ -29,7 +30,9 @@ class OnboardingScreen extends StatelessWidget {
                     style: FilledButton.styleFrom(
                       padding: const EdgeInsets.all(AppConstants.padding * 2),
                     ),
-                    onPressed: () {},
+                    onPressed: () => context.pushRoute(
+                      OnboardingIndividualRoute(),
+                    ),
                     child: Text(
                       'Fiziki şahs',
                       style: context.textTheme.titleLarge?.copyWith(
@@ -47,7 +50,9 @@ class OnboardingScreen extends StatelessWidget {
                     style: FilledButton.styleFrom(
                       padding: const EdgeInsets.all(AppConstants.padding * 2),
                     ),
-                    onPressed: () {},
+                    onPressed: () => context.pushRoute(
+                      OnboardingBusinessRoute(),
+                    ),
                     child: Text(
                       'Telekeçi (ýuridiki şahs)',
                       style: context.textTheme.titleLarge?.copyWith(
