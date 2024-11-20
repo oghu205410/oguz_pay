@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 
 import '../../../generated/assets/assets.gen.dart';
+import '../../common/config/router/app_router.gr.dart';
 import '../../common/utils/extension/extensions.dart';
+import '../../domain/enum/enum.dart';
 
 @RoutePage()
 class OnboardingBusinessScreen extends StatelessWidget {
@@ -32,11 +34,14 @@ class OnboardingBusinessScreen extends StatelessWidget {
           image: Assets.tmp.onboardingBusiness3.svg(),
         ),
       ],
-      onDone: () {},
+      onDone: () => context.replaceRoute(
+        LoginRoute(userTypeEnum: UserTypeEnum.enterprise),
+      ),
       back: const Icon(Icons.arrow_back),
-      skip: Text(
-        'Skip',
-        style: context.textTheme.labelLarge,
+      showSkipButton: true,
+      skip: TextButton(
+        onPressed: () => introKey.currentState?.skipToEnd(),
+        child: Text('Skip'),
       ),
       next: const Icon(Icons.arrow_forward),
       done: Text(

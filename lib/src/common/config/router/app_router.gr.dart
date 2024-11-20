@@ -10,6 +10,7 @@
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:auto_route/auto_route.dart' as _i7;
 import 'package:flutter/material.dart' as _i8;
+import 'package:oguz_pay/src/domain/enum/enum.dart' as _i9;
 import 'package:oguz_pay/src/presentation/home/home_screen.dart' as _i1;
 import 'package:oguz_pay/src/presentation/onboarding/onboarding_business_screen.dart'
     as _i3;
@@ -41,10 +42,17 @@ class HomeRoute extends _i7.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i2.LoginScreen]
-class LoginRoute extends _i7.PageRouteInfo<void> {
-  const LoginRoute({List<_i7.PageRouteInfo>? children})
-      : super(
+class LoginRoute extends _i7.PageRouteInfo<LoginRouteArgs> {
+  LoginRoute({
+    _i8.Key? key,
+    required _i9.UserTypeEnum userTypeEnum,
+    List<_i7.PageRouteInfo>? children,
+  }) : super(
           LoginRoute.name,
+          args: LoginRouteArgs(
+            key: key,
+            userTypeEnum: userTypeEnum,
+          ),
           initialChildren: children,
         );
 
@@ -53,9 +61,29 @@ class LoginRoute extends _i7.PageRouteInfo<void> {
   static _i7.PageInfo page = _i7.PageInfo(
     name,
     builder: (data) {
-      return const _i2.LoginScreen();
+      final args = data.argsAs<LoginRouteArgs>();
+      return _i2.LoginScreen(
+        key: args.key,
+        userTypeEnum: args.userTypeEnum,
+      );
     },
   );
+}
+
+class LoginRouteArgs {
+  const LoginRouteArgs({
+    this.key,
+    required this.userTypeEnum,
+  });
+
+  final _i8.Key? key;
+
+  final _i9.UserTypeEnum userTypeEnum;
+
+  @override
+  String toString() {
+    return 'LoginRouteArgs{key: $key, userTypeEnum: $userTypeEnum}';
+  }
 }
 
 /// generated route for

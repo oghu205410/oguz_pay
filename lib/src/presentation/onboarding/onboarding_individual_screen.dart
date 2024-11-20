@@ -1,8 +1,10 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
+import 'package:oguz_pay/src/domain/enum/enum.dart';
 
 import '../../../generated/assets/assets.gen.dart';
+import '../../common/config/router/app_router.gr.dart';
 import '../../common/utils/extension/extensions.dart';
 
 @RoutePage()
@@ -32,11 +34,14 @@ class OnboardingIndividualScreen extends StatelessWidget {
           image: Assets.tmp.onboardingBusiness3.svg(),
         ),
       ],
-      onDone: () {},
+      onDone: () => context.replaceRoute(
+        LoginRoute(userTypeEnum: UserTypeEnum.individual),
+      ),
       back: const Icon(Icons.arrow_back),
-      skip: Text(
-        'Skip',
-        style: context.textTheme.labelLarge,
+      showSkipButton: true,
+      skip: TextButton(
+        onPressed: () => introKey.currentState?.skipToEnd(),
+        child: Text('Skip'),
       ),
       next: const Icon(Icons.arrow_forward),
       done: Text(
