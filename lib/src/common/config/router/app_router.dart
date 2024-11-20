@@ -49,5 +49,8 @@ class AppRouter extends RootStackRouter {
         AutoRoute(
           page: PaymentQrScannerRoute.page,
         ),
+        AutoRoute(
+          page: PaymentIncomingRoute.page,
+        ),
       ];
 }
