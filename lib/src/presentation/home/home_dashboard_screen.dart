@@ -66,13 +66,13 @@ class _BottomNavigationBarState extends State<_BottomNavigationBar> {
           label: '',
         ),
         BottomNavigationBarItem(
-          icon: Icon(CupertinoIcons.doc_text),
-          activeIcon: Icon(CupertinoIcons.doc_text_fill),
+          icon: Icon(CupertinoIcons.creditcard),
+          activeIcon: Icon(CupertinoIcons.creditcard_fill),
           label: '',
         ),
         BottomNavigationBarItem(
-          icon: Icon(CupertinoIcons.creditcard),
-          activeIcon: Icon(CupertinoIcons.creditcard_fill),
+          icon: Icon(CupertinoIcons.doc_text),
+          activeIcon: Icon(CupertinoIcons.doc_text_fill),
           label: '',
         ),
         BottomNavigationBarItem(

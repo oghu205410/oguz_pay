@@ -21,5 +21,9 @@
     "turkmen": "Turkmen",
     "russian": "Russian",
     "english": "English"
+  },
+  "transactionHistory": {
+    "incoming": "Received",
+    "outcoming": "Sent"
   }
 }
