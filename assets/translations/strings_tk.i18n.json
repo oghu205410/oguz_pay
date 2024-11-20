@@ -1,6 +1,12 @@
 {
   "@@locale": "tk",
   "hello": "Salam!",
+  "dashboard": {
+    "home": "Baş sahypa",
+    "transactionHistory": "Amallaryň taryhy",
+    "bankCards": "Kartlarym",
+    "settings": "Sazlamalar"
+  },
   "settings": {
     "theme": "Tema",
     "language": "Dil",

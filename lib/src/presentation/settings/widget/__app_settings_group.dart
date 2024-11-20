@@ -29,7 +29,7 @@ class _ThemeMode extends StatelessWidget {
       title: context.t.settings.theme,
       trailing: Switch.adaptive(
         value: sl<SettingsStore>().settings.themeMode == ThemeMode.dark,
-        activeColor: Theme.of(context).colorScheme.error,
+        activeColor: context.colorScheme.primary,
         onChanged: (value) {
           if (value) {
             sl<SettingsStore>().updateThemeMode(ThemeMode.dark);

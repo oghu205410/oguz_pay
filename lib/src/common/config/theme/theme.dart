@@ -28,8 +28,6 @@ class AppTheme {
 
         // AppBar
         appBarTheme: const AppBarTheme(
-          centerTitle: true,
-          titleSpacing: 0,
           backgroundColor: ColorName.scaffoldBackgroundLight,
           surfaceTintColor: ColorName.scaffoldBackgroundLight,
           foregroundColor: ColorName.primaryLight,
@@ -103,8 +101,6 @@ class AppTheme {
 
         // AppBar
         appBarTheme: const AppBarTheme(
-          centerTitle: true,
-          titleSpacing: 0,
           backgroundColor: ColorName.scaffoldBackgroundDark,
           surfaceTintColor: ColorName.scaffoldBackgroundDark,
           foregroundColor: ColorName.primaryDark,

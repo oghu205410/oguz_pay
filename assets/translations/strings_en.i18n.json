@@ -1,6 +1,12 @@
 {
   "@@locale": "en",
   "hello": "Hello!",
+  "dashboard": {
+    "home": "Home",
+    "transactionHistory": "History",
+    "bankCards": "My Cards",
+    "settings": "Settings"
+  },
   "settings": {
     "theme": "Theme mode",
     "language": "Language",

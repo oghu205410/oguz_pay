@@ -1,6 +1,12 @@
 {
   "@@locale": "ru",
   "hello": "Привет!",
+  "dashboard": {
+    "home": "Главная",
+    "transactionHistory": "История",
+    "bankCards": "Мои Карты",
+    "settings": "Настройки"
+  },
   "settings": {
     "theme": "Тема",
     "language": "Язык",
