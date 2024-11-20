@@ -10,5 +10,10 @@
   "themeMode": {
     "dark": "Garaňky",
     "light": "Ýagty"
+  },
+  "locale": {
+    "turkmen": "Türkmen",
+    "russian": "Rus",
+    "english": "Iňlis"
   }
 }

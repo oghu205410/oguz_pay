@@ -23,19 +23,10 @@ class _ThemeMode extends StatelessWidget {
           sl<SettingsStore>().updateThemeMode(ThemeMode.dark);
         }
       },
-      leading: Container(
-        padding: const EdgeInsets.all(AppConstants.padding / 3),
-        decoration: BoxDecoration(
-          color: context.colorScheme.primary,
-          borderRadius: BorderRadius.circular(AppConstants.borderRadius / 3),
-        ),
-        child: Icon(
-          context.theme.brightness == Brightness.dark ? Icons.dark_mode_outlined : Icons.light_mode_outlined,
-          color: context.colorScheme.onPrimary,
-        ),
+      leading: Icon(
+        context.theme.brightness == Brightness.dark ? Icons.dark_mode_outlined : Icons.light_mode_outlined,
       ),
       title: context.t.settings.theme,
-      subtitle: context.theme.brightness == Brightness.dark ? context.t.themeMode.dark : context.t.themeMode.light,
       trailing: Switch.adaptive(
         value: sl<SettingsStore>().settings.themeMode == ThemeMode.dark,
         activeColor: Theme.of(context).colorScheme.error,
@@ -55,16 +46,8 @@ class _Language extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return _SettingsItem(
-      leading: Container(
-        padding: const EdgeInsets.all(AppConstants.padding / 3),
-        decoration: BoxDecoration(
-          color: context.colorScheme.primary,
-          borderRadius: BorderRadius.circular(AppConstants.borderRadius / 3),
-        ),
-        child: Icon(
-          Icons.language,
-          color: context.colorScheme.onPrimary,
-        ),
+      leading: Icon(
+        Icons.language,
       ),
       title: context.t.settings.language,
       trailing: _LanguageSelector(),

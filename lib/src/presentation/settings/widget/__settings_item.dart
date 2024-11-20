@@ -4,14 +4,12 @@ class _SettingsItem extends StatelessWidget {
   final VoidCallback? onTap;
   final Widget leading;
   final String title;
-  final String? subtitle;
   final Widget? trailing;
 
   const _SettingsItem({
     this.onTap,
     required this.leading,
     required this.title,
-    this.subtitle,
     this.trailing,
   });
 
@@ -32,7 +30,6 @@ class _SettingsItem extends StatelessWidget {
           title,
           style: context.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.bold),
         ),
-        subtitle: subtitle != null ? Text(subtitle!) : null,
         trailing: trailing,
       ),
     );

@@ -14,7 +14,6 @@ class AppRouter extends RootStackRouter {
   @override
   List<AutoRoute> get routes => [
         AutoRoute(
-          initial: true,
           page: OnboardingRoute.page,
         ),
         AutoRoute(
@@ -27,10 +26,23 @@ class AppRouter extends RootStackRouter {
           page: LoginRoute.page,
         ),
         AutoRoute(
-          page: HomeRoute.page,
-        ),
-        AutoRoute(
-          page: SettingsRoute.page,
+          initial: true,
+          page: HomeDashboardRoute.page,
+          children: [
+            AutoRoute(
+              initial: true,
+              page: HomeRoute.page,
+            ),
+            AutoRoute(
+              page: BankCardsRoute.page,
+            ),
+            AutoRoute(
+              page: TransactionHistoryRoute.page,
+            ),
+            AutoRoute(
+              page: SettingsRoute.page,
+            ),
+          ],
         ),
       ];
 }

@@ -10,5 +10,10 @@
   "themeMode": {
     "dark": "Темный",
     "light": "Светлый"
+  },
+  "locale": {
+    "turkmen": "Туркменский",
+    "russian": "Русский",
+    "english": "Английский"
   }
 }

@@ -28,6 +28,14 @@ class SettingsScreen extends StatelessWidget {
           children: [
             ...[
               _AppSettingsGroup(),
+              _SettingsGroup(
+                items: [
+                  _SettingsItem(
+                    leading: Icon(CupertinoIcons.info_circle),
+                    title: context.t.settings.aboutApp,
+                  ),
+                ],
+              ),
             ].expand(
               (element) => [
                 element,

@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
+import '../../common/config/router/app_router.gr.dart';
 import '../../common/constant/app_constants.dart';
 import '../../common/utils/extension/extensions.dart';
 import '../../common/widget/space.dart';
@@ -60,7 +61,9 @@ class LoginScreen extends StatelessWidget {
                       keyboardType: TextInputType.visiblePassword,
                     ),
                     FilledButton(
-                      onPressed: () {},
+                      onPressed: () => context.pushRoute(
+                        HomeDashboardRoute(),
+                      ),
                       child: Text('Sign in'),
                     ),
                   ].expand(
