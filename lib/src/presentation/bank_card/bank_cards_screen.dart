@@ -28,6 +28,7 @@ class BankCardsScreen extends StatelessWidget {
         ],
       ),
       body: ListView.separated(
+        padding: const EdgeInsets.all(AppConstants.padding),
         separatorBuilder: (context, index) => Space.v10,
         itemCount: 3,
         itemBuilder: (context, index) {
