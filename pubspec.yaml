@@ -45,6 +45,7 @@ dependencies:
   dio_cache_interceptor: ^3.5.0
   dio_cache_interceptor_sembast_storage: ^0.2.0
   equatable: ^2.0.5
+  json_annotation: ^4.9.0
   shared_preferences: ^2.3.3
   cached_network_image: ^3.3.1
   path_provider: ^2.1.5
@@ -75,6 +76,9 @@ dev_dependencies:
   
   # App icon
   icons_launcher: ^3.0.0
+
+  # Data
+  json_serializable: ^6.9.0
 
   # Utility
   build_runner: ^2.4.13

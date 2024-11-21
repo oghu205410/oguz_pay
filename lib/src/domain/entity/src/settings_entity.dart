@@ -1,8 +1,12 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
+import 'package:json_annotation/json_annotation.dart';
 
 import '../../../../../generated/strings.g.dart';
 
+part '../../../../generated/src/domain/entity/src/settings_entity.g.dart';
+
+@JsonSerializable()
 class SettingsEntity extends Equatable {
   final ThemeMode themeMode;
   final AppLocale locale;
@@ -22,22 +26,8 @@ class SettingsEntity extends Equatable {
     );
   }
 
-  Map<String, dynamic> toJson() {
-    return {
-      'themeMode': themeMode.index,
-      'locale': locale.languageTag,
-    };
-  }
-
-  factory SettingsEntity.fromJson(Map<String, dynamic> json) {
-    return SettingsEntity(
-      themeMode: ThemeMode.values[json['themeMode'] as int? ?? ThemeMode.light.index],
-      locale: AppLocale.values.firstWhere(
-        (loc) => loc.languageTag == json['locale'],
-        orElse: () => AppLocale.ru,
-      ),
-    );
-  }
+  factory SettingsEntity.fromJson(Map<String, dynamic> json) => _$SettingsEntityFromJson(json);
+  Map<String, dynamic> toJson() => _$SettingsEntityToJson(this);
 
   @override
   List<Object?> get props => [
