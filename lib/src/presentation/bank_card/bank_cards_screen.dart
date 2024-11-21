@@ -7,6 +7,8 @@ import '../../common/constant/app_constants.dart';
 import '../../common/utils/extension/extensions.dart';
 import '../../common/widget/space.dart';
 
+part 'widget/__bank_card_item.dart';
+
 @RoutePage()
 class BankCardsScreen extends StatelessWidget {
   const BankCardsScreen({super.key});
@@ -32,27 +34,7 @@ class BankCardsScreen extends StatelessWidget {
         separatorBuilder: (context, index) => Space.v10,
         itemCount: 3,
         itemBuilder: (context, index) {
-          return ListTile(
-            tileColor: context.theme.cardColor,
-            title: Text(
-              '**** **** **** 9142',
-              style: context.textTheme.titleMedium?.copyWith(
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            subtitle: Text(
-              'Amanov Aman \t',
-              style: context.textTheme.titleSmall,
-            ),
-            trailing: Container(
-              width: 80,
-              height: 40,
-              decoration: BoxDecoration(
-                color: context.colorScheme.primary,
-                borderRadius: BorderRadius.circular(AppConstants.borderRadius / 2),
-              ),
-            ),
-          );
+          return _BankCardItem();
         },
       ),
     );

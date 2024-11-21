@@ -116,6 +116,9 @@ class _TabbarState extends State<_Tabbar> {
             children: [
               Text(
                 local.value.getName(context),
+                style: context.textTheme.labelLarge?.copyWith(
+                  color: current == local.value ? context.colorScheme.onPrimary : context.colorScheme.onSurface,
+                ),
               ),
             ],
           );
@@ -124,6 +127,7 @@ class _TabbarState extends State<_Tabbar> {
         style: ToggleStyle(
           borderColor: Colors.transparent,
           indicatorColor: context.colorScheme.primary,
+          backgroundColor: context.theme.cardColor,
         ),
         borderWidth: AppConstants.padding / 2,
         onChanged: (value) => setState(
