@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 
 import '../../../generated/strings.g.dart';
 import '../../common/config/router/app_router.gr.dart';
-import '../../common/widget/space.dart';
 
 @RoutePage()
 class HomeScreen extends StatelessWidget {
@@ -17,27 +16,13 @@ class HomeScreen extends StatelessWidget {
           context.t.dashboard.home,
         ),
       ),
-      floatingActionButton: Row(
-        mainAxisAlignment: MainAxisAlignment.end,
-        children: [
-          FilledButton(
-            onPressed: () => context.pushRoute(
-              PaymentIncomingRoute(),
-            ),
-            child: Text(
-              'Получить',
-            ),
-          ),
-          Space.h20,
-          FloatingActionButton(
-            onPressed: () => context.pushRoute(
-              PaymentQrScannerRoute(),
-            ),
-            child: Icon(
-              Icons.qr_code,
-            ),
-          ),
-        ],
+      floatingActionButton: FloatingActionButton(
+        onPressed: () => context.pushRoute(
+          PaymentQrScannerRoute(),
+        ),
+        child: Icon(
+          Icons.qr_code,
+        ),
       ),
     );
   }
