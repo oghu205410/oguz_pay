@@ -1,4 +1,0 @@
-enum UserTypeEnum {
-  individual,
-  enterprise;
-}
