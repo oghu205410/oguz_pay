@@ -34,6 +34,9 @@ class AppRouter extends RootStackRouter {
               page: TransactionHistoryRoute.page,
             ),
             AutoRoute(
+              page: NewsRoute.page,
+            ),
+            AutoRoute(
               page: SettingsRoute.page,
             ),
           ],

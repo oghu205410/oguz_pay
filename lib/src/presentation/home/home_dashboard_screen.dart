@@ -16,6 +16,7 @@ class HomeDashboardScreen extends StatelessWidget {
         HomeRoute(),
         BankCardsRoute(),
         TransactionHistoryRoute(),
+        NewsRoute(),
         SettingsRoute(),
       ],
       physics: const NeverScrollableScrollPhysics(),
@@ -72,6 +73,11 @@ class _BottomNavigationBarState extends State<_BottomNavigationBar> {
         ),
         BottomNavigationBarItem(
           icon: Icon(CupertinoIcons.doc_text),
+          activeIcon: Icon(CupertinoIcons.doc_text_fill),
+          label: '',
+        ),
+        BottomNavigationBarItem(
+          icon: Icon(CupertinoIcons.globe),
           activeIcon: Icon(CupertinoIcons.doc_text_fill),
           label: '',
         ),
